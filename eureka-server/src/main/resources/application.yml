@@ -1,0 +1,25 @@
+server:
+  port: 1111
+spring:
+  application:
+    name: node1
+eureka:
+  instance:
+    hostname: node1
+  client:
+    register-with-eureka: false
+    fetch-registry: true
+    service-url:
+      defaultZone: http://node1:1111/eureka
+  server:
+    enable-self-preservation: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    shutdown:
+      enabled: true
+      sensitive: false
+

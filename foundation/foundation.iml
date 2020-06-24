@@ -7,6 +7,14 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="netty-all-4.1.25.Final" level="project" />
+    <orderEntry type="library" name="netty-handler-4.1.25.Final" level="project" />
+    <orderEntry type="library" name="netty-buffer-4.1.25.Final" level="project" />
+    <orderEntry type="library" name="netty-codec-4.1.25.Final" level="project" />
+    <orderEntry type="library" name="netty-codec-http-4.0.25.Final" level="project" />
+    <orderEntry type="library" name="netty-common-4.1.25.Final" level="project" />
+    <orderEntry type="library" name="netty-resolver-4.1.25.Final" level="project" />
+    <orderEntry type="library" name="netty-transport-4.1.25.Final" level="project" />
+    <orderEntry type="library" name="netty-transport-native-epoll-4.0.25.Final" level="project" />
   </component>
 </module>
-

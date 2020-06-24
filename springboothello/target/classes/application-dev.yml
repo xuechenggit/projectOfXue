@@ -1,0 +1,50 @@
+server:
+  port: 8899
+spring:
+  application:
+    name: hello
+  redis:
+    database: 2
+    host: 127.0.0.1
+    port: 6379
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+  security:
+    user:
+      name: xue
+      password: cheng
+  profiles:
+    active: dev
+#  datasource:
+ #   url: jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf-8
+ #   username: mybatis
+ #   password: root
+ #   driver-class-name: com.mysql.jdbc.Driver
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf-8
+    username: mybatis
+    password: root
+    initialSize: 5
+    minIdle: 0
+    maxActive: 5
+    filters: stat,wall,log4j
+
+
+mybatis:
+  type-aliases-package: demo.spring.boot.model
+management:
+  endpoint:
+    beans:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: ["beans", "info"]
